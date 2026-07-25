@@ -1,0 +1,29 @@
+/* ==========================
+   Global
+========================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0f172a;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-content {
+    padding-top: 4.5rem;
+}

@@ -1,0 +1,169 @@
+/* ==========================
+   Navbar
+========================== */
+
+.bg-navbar {
+    background-color: #000;
+}
+
+.navbar {
+    transition: all 0.3s ease;
+}
+
+/* ==========================
+   Navigation Links
+========================== */
+
+.nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--hover-color) !important;
+    transform: scale(1.08);
+}
+
+.active-nav-link {
+    color: var(--primary-color) !important;
+    font-weight: 700;
+    transform: scale(1.08);
+}
+
+/* ==========================
+   Navbar Toggler
+========================== */
+
+.navbar-toggler {
+    border: none;
+    box-shadow: none !important;
+    padding: 0.4rem 0.6rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* ==========================
+   Mobile View
+========================== */
+
+@media (max-width: 991.98px) {
+
+    .navbar-collapse {
+
+        margin-top: 1rem;
+
+        background: #111827;
+
+        border-radius: 16px;
+
+        padding: 1rem;
+
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+
+        animation: slideDown 0.3s ease;
+    }
+
+    .navbar-nav {
+
+        align-items: center;
+
+        gap: 0.5rem;
+    }
+
+    .nav-item {
+
+        width: 100%;
+    }
+
+    .nav-link {
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        width: 100%;
+
+        min-height: 48px;
+
+        border-radius: 10px;
+
+        font-size: 1rem;
+
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-link:hover {
+
+        background: rgba(255, 255, 255, 0.08);
+
+        transform: none;
+    }
+
+    .active-nav-link {
+
+        background: var(--primary-color);
+
+        color: #fff !important;
+
+        transform: none;
+    }
+
+    .nav-item .btn {
+
+        width: 100%;
+
+        margin-top: 0.75rem;
+    }
+}
+
+/* ==========================
+   Desktop View
+========================== */
+
+@media (min-width: 992px) {
+
+    .navbar-collapse {
+
+        background: transparent;
+
+        padding: 0;
+
+        box-shadow: none;
+    }
+
+    .nav-item .btn {
+
+        width: auto;
+    }
+}
+
+/* ==========================
+   Animation
+========================== */
+
+@keyframes slideDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-brand span:hover {
+    color: var(--hover-color) !important;
+    transform: scale(1.08);
+}

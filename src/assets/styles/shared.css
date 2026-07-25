@@ -1,0 +1,48 @@
+/* ==========================
+   Shared Card
+========================== */
+
+.technology-card {
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--border-color);
+
+    background: rgba(255, 255, 255, .04);
+
+    transition: all var(--transition);
+
+    cursor: pointer;
+
+}
+
+.technology-icon {
+
+    color: white;
+
+    transition: var(--transition);
+
+}
+
+.technology-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: var(--primary-color);
+
+    box-shadow: 0 10px 25px rgba(79, 172, 254, .25);
+
+}
+
+.technology-card:hover .technology-icon {
+
+    color: var(--primary-color);
+
+}

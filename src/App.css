@@ -1,0 +1,124 @@
+/* ==========================
+   Body
+========================== */
+
+.bg-col-body {
+    background-color: #0f172a;
+}
+
+/* ==========================
+   Navbar
+========================== */
+
+.bg-navbar {
+    background-color: #000;
+}
+
+.main-content {
+    padding-top: 4.5rem;
+}
+
+/* ==========================
+   Hero Section
+========================== */
+
+.col-main-components {
+    background-color: #0b021b;
+    color: white;
+    min-height: calc(100vh - 80px);
+}
+
+/* ==========================
+   Gradient Text
+========================== */
+
+.gradient-text {
+    background: linear-gradient(
+            90deg,
+            #6506f4,
+            #4facfe,
+            #7b61ff,
+            #b700ff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ==========================
+   Profile Image
+========================== */
+
+.profile-image {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+}
+
+/* ==========================
+   Technology / Social Cards
+========================== */
+
+.technology-card {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    background: rgba(255,255,255,.04);
+
+    transition: all .3s ease;
+
+    cursor: pointer;
+}
+
+.technology-icon {
+    color: white;
+    transition: .3s;
+}
+
+.technology-card:hover {
+    transform: translateY(-6px);
+    border-color: #4facfe;
+    box-shadow: 0 10px 25px rgba(79,172,254,.25);
+}
+
+.technology-card:hover .technology-icon {
+    color: #4facfe;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 992px) {
+
+    .col-main-components {
+        text-align: center;
+    }
+
+    .profile-image {
+        max-width: 300px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .profile-image {
+        max-width: 230px;
+    }
+
+    .technology-card {
+        width: 55px;
+        height: 55px;
+    }
+
+}

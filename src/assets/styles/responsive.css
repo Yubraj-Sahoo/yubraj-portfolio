@@ -1,0 +1,41 @@
+/* ==========================
+   Tablet
+========================== */
+
+@media (max-width: 992px) {
+
+    .col-main-components {
+
+        text-align: center;
+
+    }
+
+    .profile-image {
+
+        max-width: 300px;
+
+    }
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width: 576px) {
+
+    .profile-image {
+
+        max-width: 230px;
+
+    }
+
+    .technology-card {
+
+        width: 55px;
+
+        height: 55px;
+
+    }
+
+}

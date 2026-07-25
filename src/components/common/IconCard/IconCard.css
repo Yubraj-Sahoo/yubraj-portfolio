@@ -1,0 +1,37 @@
+.icon-card {
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+
+    transition: all 0.3s ease;
+
+}
+
+.icon-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: var(--hover-color);
+
+}
+
+.icon-card__icon {
+
+    color: white;
+
+    transition: color 0.3s ease;
+
+}
+
+.icon-card:hover .icon-card__icon {
+
+    color: var(--hover-color);
+
+}

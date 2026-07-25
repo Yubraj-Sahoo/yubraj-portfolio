@@ -1,0 +1,26 @@
+.col-main-components{
+    color:white;
+    min-height:calc(100vh - 80px);
+}
+
+.gradient-text{
+
+    background:linear-gradient(
+            90deg,
+            #6506f4,
+            #4facfe,
+            #7b61ff,
+            #b700ff
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+}
+
+.profile-image{
+
+    width:100%;
+    max-width:420px;
+
+}
