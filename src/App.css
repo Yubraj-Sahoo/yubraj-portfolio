@@ -1,9 +1,18 @@
 .app-container {
     background: var(--color-bg);
-    height: 100vh;
 }
 
 .app-components {
     margin: .3rem;
     border-radius: .8rem;
+    padding: 2rem;
+}
+
+.main-container {
+    margin-top: 4.5rem;
+}
+
+.main-component-container {
+    background: var(--color-bg-main-components);
+    color: var(--color-main-components);
 }

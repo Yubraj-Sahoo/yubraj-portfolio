@@ -1,15 +1,16 @@
 :root {
-    --color-bg: #49548e;
+    --color-bg: #445371;
 
     --color-bg-nav: #000;
     --color-nav: #fff;
 
-    --color-bg-main-components: #01061c;
+    --color-bg-main-components: radial-gradient(#010710, #042553, #010710, #1b0145);;
     --color-main-components: #fff;
 
     /*links*/
     --color-link: white;
     --color-link-active: #0630f4;
+    --color-link-hover: #db0cea;
 
     /* ===========================
         Button - Primary
