@@ -1,0 +1,53 @@
+:root {
+    --color-bg: #49548e;
+
+    --color-bg-nav: #000;
+    --color-nav: #fff;
+
+    --color-bg-main-components: #01061c;
+    --color-main-components: #fff;
+
+    /*links*/
+    --color-link: white;
+    --color-link-active: #0630f4;
+
+    /* ===========================
+        Button - Primary
+     =========================== */
+    --color-button-primary: #0630f4;
+    --color-button-primary-hover: #db0cea;
+    --color-button-primary-active: #6506f4;
+    --color-button-primary-text: #ffffff;
+
+    /*Buttons*/
+
+    /* ===========================
+       Button - Secondary
+    =========================== */
+    --color-button-secondary: #6c757d;
+    --color-button-secondary-hover: #5c636a;
+    --color-button-secondary-active: #4b5258;
+    --color-button-secondary-text: #ffffff;
+
+    /* ===========================
+       Button - Outline
+    =========================== */
+    --color-button-outline: #0630f4;
+    --color-button-outline-hover: #0630f4;
+    --color-button-outline-active: #6506f4;
+    --color-button-outline-text: #0630f4;
+    --color-button-outline-hover-text: #ffffff;
+
+    /* ===========================
+       Button - Ghost
+    =========================== */
+    --color-button-ghost-text: #0630f4;
+    --color-button-ghost-hover-bg: rgba(6, 48, 244, 0.1);
+    --color-button-ghost-active-bg: rgba(101, 6, 244, 0.15);
+
+    /* ===========================
+       Button - Disabled
+    =========================== */
+    --color-button-disabled-bg: #6c757d;
+    --color-button-disabled-text: #ced4da;
+}

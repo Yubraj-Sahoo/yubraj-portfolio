@@ -1,0 +1,66 @@
+/* ===========================
+   Navbar
+=========================== */
+
+.nav-color {
+    background: var(--color-bg-nav);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+}
+
+.navbar-pad {
+    padding: 0 1rem !important;
+}
+
+/* ===========================
+   Logo
+=========================== */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+.logo span {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-nav);
+    font-family: "Courier New", monospace;
+}
+
+/* ===========================
+   Navigation Links
+=========================== */
+
+.nav-link {
+    color: var(--color-link) !important;
+    font-weight: 500;
+    position: relative;
+    transition: all .25s ease;
+}
+
+.nav-link.active {
+    color: var(--color-link-active);
+    font-weight: 600;
+}
+
+/* Underline Animation */
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: .2rem;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--color-link-active);
+
+    transition: width .3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}

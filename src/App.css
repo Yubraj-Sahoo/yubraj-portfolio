@@ -1,0 +1,9 @@
+.app-container {
+    background: var(--color-bg);
+    height: 100vh;
+}
+
+.app-components {
+    margin: .3rem;
+    border-radius: .8rem;
+}
