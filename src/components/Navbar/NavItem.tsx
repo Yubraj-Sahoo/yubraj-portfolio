@@ -1,4 +1,4 @@
-import type {NavLink} from "../../types/navbar";
+import type {NavLink} from "../../types";
 
 /**
  * Props for NavItem

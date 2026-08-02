@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NAV_LINKS } from "../../data/navbar";
+import { NAV_LINKS } from "../../data";
 import { Logo } from "./Logo";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
@@ -36,7 +36,7 @@ const MobileNav = () => {
 
   return (
     <div className="mobile-nav">
-      <Logo />
+      <Logo onClick={() => setActiveNavItem("home")} />
       {open ? closeIcon : hamburgerIcon}
       <ul className={`mobile-nav-links ${open ? "open" : ""}`}>
         {NAV_LINKS.map((item) => (

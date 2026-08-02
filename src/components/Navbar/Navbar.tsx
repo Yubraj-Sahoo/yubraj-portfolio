@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
 import {Logo} from "./Logo";
 import {NavItem} from "./NavItem";
-import {NAV_LINKS} from "../../data/navbar";
+import {NAV_LINKS} from "../../data";
 import MobileNav from "./MobileNav";
 
 import "./Navbar.css";
@@ -36,7 +36,7 @@ const Navbar = () => {
                     <MobileNav />
                 ) : (
                     <>
-                        <Logo/>
+                        <Logo onClick={() => setActiveNavItem("home")} />
                         <ul className={`navbar-nav flex-row gap-4 ms-auto navbar-pad`}>
                             {NAV_LINKS.map((item) => (
                                 <NavItem

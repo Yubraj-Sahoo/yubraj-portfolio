@@ -1,0 +1,121 @@
+.hero-name {
+    background: linear-gradient(
+            90deg,
+            #fb1690 0%,
+            #e988f4 25%,
+            #ffd700 50%,
+            #0630f4 75%,
+            #41fb2a 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.hero-role {
+    background: linear-gradient(
+            90deg,
+            #0630f4 30%,
+            #fb1690 60%,
+            #41fb2a 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.hero-tagline {
+    max-width: 30rem;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/*technologies icon*/
+.technology-item {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.technology-item:hover {
+    background: var(--color-icon-color-hover);
+    transform: translateY(-5px);
+    box-shadow: var(--color-icon-color-box-shadow);
+}
+
+.technology-icon {
+    font-size: 2rem;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .technology-item {
+        width: 52px;
+        height: 52px;
+    }
+
+    .technology-icon {
+        font-size: 1.8rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .technologies {
+        text-align: center;
+    }
+
+    .technology-item {
+        width: 48px;
+        height: 48px;
+    }
+
+    .technology-icon {
+        font-size: 1.6rem;
+    }
+}
+
+/*avatar css*/
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Large tablets */
+@media (max-width: 992px) {
+    .avatar-image {
+        max-width: 400px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .avatar-image {
+        max-width: 300px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 576px) {
+    .avatar-image {
+        max-width: 220px;
+    }
+}

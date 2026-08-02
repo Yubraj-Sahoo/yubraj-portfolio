@@ -51,4 +51,11 @@
     =========================== */
     --color-button-disabled-bg: #6c757d;
     --color-button-disabled-text: #ced4da;
+
+    /**=================================
+    Icons
+     ===================================*/
+    --color-icon-color-hover: rgba(255, 255, 255, .05);
+    --color-icon-color-box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+
 }

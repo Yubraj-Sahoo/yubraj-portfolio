@@ -1,4 +1,4 @@
-import type {AppInfo} from "../../types/app.ts";
+import type {AppInfo} from "../../types";
 
 interface Props {
     item: AppInfo
@@ -7,19 +7,21 @@ interface Props {
 export const HeroContent = ({item}: Props) => {
     return (
         <>
-            <p>
-                Hi, I'm
+            <p className={`text-secondary`}>
+                {item.greetings}
             </p>
-            <h1>
+            <h1 className={`hero-name`}>
                 {item.name}
             </h1>
-            <h3>
+            <br/>
+            <h4 className={`hero-role`}>
                 {item.role}
-            </h3>
-            <span>
+            </h4>
+            <br/>
+            <span className={`bg-info-subtle p-1 rounded-2 text-primary fw-bold`}>
                 {item.experience}
             </span>
-            <p >
+            <p className={`hero-tagline mt-3`}>
                 {item.tagline}
             </p>
         </>

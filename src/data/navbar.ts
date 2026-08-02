@@ -1,4 +1,4 @@
-import type {NavLink} from "../types/navbar.ts";
+import type {NavLink} from "../types";
 
 export const NAV_LINKS: NavLink[] = [
     {

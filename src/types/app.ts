@@ -6,6 +6,9 @@
  * @author Yubraj Sahoo
  */
 export interface AppInfo {
+    /** Greeting message */
+    greetings: string;
+
     /** Portfolio owner name */
     name: string;
 
@@ -20,6 +23,9 @@ export interface AppInfo {
 
     /** Number of years of experience */
     experience: string;
+
+    /** avatar */
+    avatar: string;
 
     /** Primary email */
     email: string;
