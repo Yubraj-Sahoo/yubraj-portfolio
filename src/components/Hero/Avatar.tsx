@@ -1,10 +1,10 @@
-import type { AppInfo } from "../../types";
+import type {AppInfo} from "../../types";
 
 interface Props {
     item: AppInfo;
 }
 
-export const Avatar = ({ item }: Props) => {
+export const Avatar = ({item}: Props) => {
     return (
         <section className="avatar-container">
             <img

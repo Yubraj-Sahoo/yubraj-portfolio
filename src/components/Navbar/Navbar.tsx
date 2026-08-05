@@ -33,10 +33,10 @@ const Navbar = () => {
         <nav className={`navbar fixed-top nav-color app-components`}>
             <div className={`container-fluid navbar-pad`}>
                 {isMobile ? (
-                    <MobileNav />
+                    <MobileNav/>
                 ) : (
                     <>
-                        <Logo onClick={() => setActiveNavItem("home")} />
+                        <Logo onClick={() => setActiveNavItem("home")}/>
                         <ul className={`navbar-nav flex-row gap-4 ms-auto navbar-pad`}>
                             {NAV_LINKS.map((item) => (
                                 <NavItem

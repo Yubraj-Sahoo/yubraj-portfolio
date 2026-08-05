@@ -1,6 +1,7 @@
 import './App.css'
 import {Navbar} from "./components/Navbar";
 import {Hero} from "./components/Hero";
+import {About} from "./components/About";
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
             </header>
             <main className={`main-container d-flex flex-column`}>
                 <Hero/>
+                <About/>
             </main>
         </div>
     )

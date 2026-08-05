@@ -1,5 +1,5 @@
-import { WORKED_TECHNOLOGIES } from "../../data";
-import { Icon } from "../common/Icon";
+import {WORKED_TECHNOLOGIES} from "../../data";
+import {Icon} from "../common/Icon";
 
 /**
  * Technologies section.
