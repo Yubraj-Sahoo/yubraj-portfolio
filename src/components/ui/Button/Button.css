@@ -1,0 +1,192 @@
+/* ==================================================
+   Base Button
+================================================== */
+
+.app-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+    user-select: none;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    font-weight: 600;
+    line-height: 1;
+
+    transition: background-color .25s ease,
+    color .25s ease,
+    border-color .25s ease,
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .app-btn:hover {
+        text-decoration: none;
+        transform: translateY(-2px);
+    }
+}
+
+.app-btn:active {
+    transform: scale(.98);
+}
+
+.app-btn:focus-visible {
+    outline: 3px solid rgba(99, 102, 241, .35);
+    outline-offset: 2px;
+}
+
+.app-btn:disabled {
+    background: var(--color-button-disabled-bg);
+    color: var(--color-button-disabled-text);
+
+    cursor: not-allowed;
+    pointer-events: none;
+
+    opacity: .75;
+    transform: none;
+}
+
+/* ==================================================
+   Sizes
+================================================== */
+
+.app-btn-sm {
+    padding: .55rem 1rem;
+    font-size: .875rem;
+}
+
+.app-btn-md {
+    padding: .75rem 1.5rem;
+    font-size: 1rem;
+}
+
+.app-btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* ==================================================
+   Border Radius
+================================================== */
+
+.app-btn-radius-rectangular {
+    border-radius: 0;
+}
+
+.app-btn-radius-circle-1 {
+    border-radius: .5rem;
+}
+
+.app-btn-radius-circle-2 {
+    border-radius: 1rem;
+}
+
+.app-btn-radius-circle-3 {
+    border-radius: 9999px;
+}
+
+/* ==================================================
+   Primary
+================================================== */
+
+.app-btn-primary {
+    background: var(--color-button-primary);
+    color: var(--color-button-primary-text);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .app-btn-primary:hover {
+        background: var(--color-button-primary-hover);
+    }
+}
+
+.app-btn-primary:active {
+    background: var(--color-button-primary-active);
+}
+
+/* ==================================================
+   Secondary
+================================================== */
+
+.app-btn-secondary {
+    background: var(--color-button-secondary);
+    color: var(--color-button-secondary-text);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .app-btn-secondary:hover {
+        background: var(--color-button-secondary-hover);
+    }
+}
+
+.app-btn-secondary:active {
+    background: var(--color-button-secondary-active);
+}
+
+/* ==================================================
+   Ghost
+================================================== */
+
+.app-btn-ghost {
+    background: transparent;
+    color: var(--color-button-ghost-text);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .app-btn-ghost:hover {
+        background: var(--color-button-ghost-hover-bg);
+    }
+}
+
+.app-btn-ghost:active {
+    background: var(--color-button-ghost-active-bg);
+}
+
+/* ==================================================
+   Outlined Modifier
+================================================== */
+
+.app-btn-outlined {
+    background: transparent !important;
+    border: 2px solid currentColor;
+}
+
+.app-btn-primary.app-btn-outlined {
+    color: var(--color-button-primary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .app-btn-primary.app-btn-outlined:hover {
+        background: var(--color-button-primary) !important;
+        color: var(--color-button-primary-text);
+    }
+
+    .app-btn-secondary.app-btn-outlined:hover {
+        background: var(--color-button-secondary) !important;
+        color: var(--color-button-secondary-text);
+    }
+}
+
+.app-btn-secondary.app-btn-outlined {
+    color: var(--color-button-secondary);
+}
+
+.app-btn-ghost.app-btn-outlined {
+    border-color: var(--color-button-ghost-text);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .app-btn-ghost.app-btn-outlined:hover {
+        background: var(--color-button-primary) !important;
+        border-color: var(--color-button-primary);
+        color: var(--color-button-primary-text);
+    }
+}

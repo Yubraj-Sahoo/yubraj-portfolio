@@ -1,0 +1,67 @@
+:root {
+    --color-bg: #445371;
+
+    --color-bg-nav: #000;
+    --color-nav: #fff;
+
+    --color-bg-main-components: radial-gradient(#010710, #042553, #010710, #1b0145);;
+    --color-main-components: #fff;
+
+    /*links*/
+    --color-link: white;
+    --color-link-active: #0630f4;
+    --color-link-hover: #db0cea;
+
+    /* ===========================
+        Button - Primary
+     =========================== */
+    --color-button-primary: #0630f4;
+    --color-button-primary-hover: #db0cea;
+    --color-button-primary-active: #6506f4;
+    --color-button-primary-text: #ffffff;
+
+    /*Buttons*/
+
+    /* ===========================
+       Button - Secondary
+    =========================== */
+    --color-button-secondary: #6c757d;
+    --color-button-secondary-hover: #5c636a;
+    --color-button-secondary-active: #4b5258;
+    --color-button-secondary-text: #ffffff;
+
+    /* ===========================
+       Button - Outline
+    =========================== */
+    --color-button-outline: #0630f4;
+    --color-button-outline-hover: #0630f4;
+    --color-button-outline-active: #6506f4;
+    --color-button-outline-text: #0630f4;
+    --color-button-outline-hover-text: #ffffff;
+
+    /* ===========================
+       Button - Ghost
+    =========================== */
+    --color-button-ghost-text: #0630f4;
+    --color-button-ghost-hover-bg: rgba(6, 48, 244, 0.1);
+    --color-button-ghost-active-bg: rgba(101, 6, 244, 0.15);
+
+    /* ===========================
+       Button - Disabled
+    =========================== */
+    --color-button-disabled-bg: #6c757d;
+    --color-button-disabled-text: #ced4da;
+
+    /**=================================
+    Icons
+     ===================================*/
+    --color-icon-color-hover: rgba(255, 255, 255, .05);
+    --color-icon-color-box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+
+    /* ===========================
+       Progress Bar
+    =========================== */
+    --color-progress-bg: rgba(255, 255, 255, 0.1);
+    --color-progress-bar: #0630f4;
+    --color-progress-bar-end: #db0cea;
+}

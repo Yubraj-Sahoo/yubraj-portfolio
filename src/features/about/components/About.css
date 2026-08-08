@@ -1,0 +1,44 @@
+.about-section {
+    padding: clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 5vw, 5rem);
+}
+
+
+.about-section__copy {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.98rem;
+    line-height: 1.8;
+    max-width: 39rem;
+}
+
+.about-section__copy p + p {
+    margin-top: 1rem;
+}
+
+.about-section__button {
+  margin-top: 1.8rem;
+}
+
+.about-statistic__icon {
+  color: #814dff;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  stroke-width: 1.8;
+}
+
+.about-statistic__value {
+  font-size: 1.65rem;
+  line-height: 1;
+  margin-bottom: 0.55rem;
+}
+
+.about-statistic__label {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.83rem;
+}
+
+@media (max-width: 575.98px) {
+    .about-section {
+        padding: 2.5rem 1.25rem;
+    }
+
+}
