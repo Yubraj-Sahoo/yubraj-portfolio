@@ -1,4 +1,4 @@
-import {ABOUT_CONTENT} from '../../../data';
+import {ABOUT_CONTENT, APP_INFO} from '../../../data';
 import {Button} from '../../../components/ui';
 
 export const Content = () => {
@@ -16,9 +16,14 @@ export const Content = () => {
                 ))}
             </div>
 
-            <Button href={ABOUT_CONTENT.ctaHref} size="md" radius="circle-1" className="about-section__button">
-                {ABOUT_CONTENT.ctaLabel}
-            </Button>
+            {
+                APP_INFO.config.enableExperience && (
+                    <Button href={ABOUT_CONTENT.ctaHref} size="md" radius="circle-1" className="about-section__button">
+                        {ABOUT_CONTENT.ctaLabel}
+                    </Button>
+                )
+            }
+
         </div>
     );
 };

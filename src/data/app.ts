@@ -34,5 +34,8 @@ export const APP_INFO: AppInfo = {
     },
     config: {
         showHireButton: false,
+        enableResume: false,
+        enableContact: false,
+        enableExperience:false,
     },
 };

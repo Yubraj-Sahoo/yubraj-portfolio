@@ -14,12 +14,15 @@ export const Hero = () => {
                 <div className="col-lg-6 order-2 order-lg-1 hero-section__content">
                     <HeroContent key={APP_INFO.personal.name} item={APP_INFO}/>
                     <div className="hero-section__actions">
-                        <Button radius="circle-1" onClick={downloadResume}>
-                            {HERO_ACTIONS.resumeLabel}
-                        </Button>
-                        <Button href={HERO_ACTIONS.contactHref} variant="ghost" outlined radius="circle-1">
-                            {HERO_ACTIONS.contactLabel}
-                        </Button>
+                        {APP_INFO.config.enableResume && (<Button radius="circle-1" onClick={downloadResume}>
+                                {HERO_ACTIONS.resumeLabel}
+                            </Button>
+                        )}
+                        {APP_INFO.config.enableContact && (
+                            <Button href={HERO_ACTIONS.contactHref} variant="ghost" outlined radius="circle-1">
+                                {HERO_ACTIONS.contactLabel}
+                            </Button>
+                        )}
                     </div>
                     <Technologies/>
                 </div>
