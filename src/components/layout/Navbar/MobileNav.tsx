@@ -14,6 +14,7 @@ const MobileNav = ({activeNavItem: controlledActiveNavItem, onActiveNavItemChang
     const [open, setOpen] = useState(false);
     const [internalActiveNavItem, setInternalActiveNavItem] = useState("home");
     const touchStartX = useRef(0);
+    const mobileNavRef = useRef<HTMLDivElement>(null);
     const activeNavItem = controlledActiveNavItem ?? internalActiveNavItem;
 
     const setActiveNavItem = (itemId: string) => {
@@ -31,18 +32,35 @@ const MobileNav = ({activeNavItem: controlledActiveNavItem, onActiveNavItemChang
             const swipeDistance = touchEndX - touchStartX.current;
             
             if (swipeDistance > 50 && touchStartX.current < 30) {
+                e.preventDefault();
                 setOpen(true);
             }
         };
 
-        window.addEventListener('touchstart', handleTouchStart);
-        window.addEventListener('touchend', handleTouchEnd);
+        window.addEventListener('touchstart', handleTouchStart, false);
+        window.addEventListener('touchend', handleTouchEnd, { passive: false } as EventListenerOptions);
 
         return () => {
             window.removeEventListener('touchstart', handleTouchStart);
             window.removeEventListener('touchend', handleTouchEnd);
         };
     }, []);
+
+    useEffect(() => {
+        const handleClickOutside = (e: MouseEvent) => {
+            if (mobileNavRef.current && !mobileNavRef.current.contains(e.target as Node)) {
+                setOpen(false);
+            }
+        };
+
+        if (open) {
+            document.addEventListener('click', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, [open]);
 
     const hamburgerIcon = (
         <GiHamburgerMenu
@@ -70,7 +88,7 @@ const MobileNav = ({activeNavItem: controlledActiveNavItem, onActiveNavItemChang
     };
 
     return (
-        <div className="mobile-nav">
+        <div className="mobile-nav" ref={mobileNavRef}>
             <Logo onClick={() => setActiveNavItem("home")}/>
             {open ? closeIcon : hamburgerIcon}
             <ul className={`mobile-nav-links ${open ? "open" : ""}`}>
