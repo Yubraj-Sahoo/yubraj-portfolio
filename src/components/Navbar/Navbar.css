@@ -60,7 +60,12 @@
     transition: width .3s ease;
 }
 
-.nav-link:hover::after,
+@media (hover: hover) and (pointer: fine) {
+    .nav-link:hover::after {
+        width: 100%;
+    }
+}
+
 .nav-link.active::after {
     width: 100%;
 }
@@ -124,7 +129,12 @@
     transition: width .3s ease;
 }
 
-.mobile-nav-links a:hover::after,
+@media (hover: hover) and (pointer: fine) {
+    .mobile-nav-links a:hover::after {
+        width: 100%;
+    }
+}
+
 .mobile-nav-links a.active::after {
     width: 100%;
 }

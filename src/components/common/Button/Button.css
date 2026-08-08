@@ -27,9 +27,11 @@
     box-shadow .2s ease;
 }
 
-.app-btn:hover {
-    text-decoration: none;
-    transform: translateY(-2px);
+@media (hover: hover) and (pointer: fine) {
+    .app-btn:hover {
+        text-decoration: none;
+        transform: translateY(-2px);
+    }
 }
 
 .app-btn:active {
@@ -100,8 +102,10 @@
     color: var(--color-button-primary-text);
 }
 
-.app-btn-primary:hover {
-    background: var(--color-button-primary-hover);
+@media (hover: hover) and (pointer: fine) {
+    .app-btn-primary:hover {
+        background: var(--color-button-primary-hover);
+    }
 }
 
 .app-btn-primary:active {
@@ -117,8 +121,10 @@
     color: var(--color-button-secondary-text);
 }
 
-.app-btn-secondary:hover {
-    background: var(--color-button-secondary-hover);
+@media (hover: hover) and (pointer: fine) {
+    .app-btn-secondary:hover {
+        background: var(--color-button-secondary-hover);
+    }
 }
 
 .app-btn-secondary:active {
@@ -134,8 +140,10 @@
     color: var(--color-button-ghost-text);
 }
 
-.app-btn-ghost:hover {
-    background: var(--color-button-ghost-hover-bg);
+@media (hover: hover) and (pointer: fine) {
+    .app-btn-ghost:hover {
+        background: var(--color-button-ghost-hover-bg);
+    }
 }
 
 .app-btn-ghost:active {
@@ -155,18 +163,20 @@
     color: var(--color-button-primary);
 }
 
-.app-btn-primary.app-btn-outlined:hover {
-    background: var(--color-button-primary) !important;
-    color: var(--color-button-primary-text);
+@media (hover: hover) and (pointer: fine) {
+    .app-btn-primary.app-btn-outlined:hover {
+        background: var(--color-button-primary) !important;
+        color: var(--color-button-primary-text);
+    }
+
+    .app-btn-secondary.app-btn-outlined:hover {
+        background: var(--color-button-secondary) !important;
+        color: var(--color-button-secondary-text);
+    }
 }
 
 .app-btn-secondary.app-btn-outlined {
     color: var(--color-button-secondary);
-}
-
-.app-btn-secondary.app-btn-outlined:hover {
-    background: var(--color-button-secondary) !important;
-    color: var(--color-button-secondary-text);
 }
 
 .app-btn-ghost.app-btn-outlined {
