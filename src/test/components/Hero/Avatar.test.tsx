@@ -18,7 +18,7 @@ describe("Avatar", () => {
 
         expect(
             screen.getByAltText("Avatar")
-        ).toHaveAttribute("src", MOCKED_APP_INFO.avatar);
+        ).toHaveAttribute("src", MOCKED_APP_INFO.personal.avatar);
     });
 
     test("applies avatar-image class", () => {

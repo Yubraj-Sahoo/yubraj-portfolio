@@ -1,6 +1,6 @@
-import type {AppInfo} from "../types";
-import logo from "../../public/favicon.png";
-import avatar from "../assets/images/avatar.png"
+import type { AppInfo } from '../types';
+import logo from '../../public/favicon.png';
+import avatar from '../assets/images/avatar.png';
 
 /**
  * Application information.
@@ -10,30 +10,26 @@ import avatar from "../assets/images/avatar.png"
  * @author Yubraj Sahoo
  */
 export const APP_INFO: AppInfo = {
-    greetings: "Hi, I'm",
-
-    name: "Yubraj Sahoo",
-
-    logo,
-
-    role: "Full Stack Java Developer",
-
-    tagline:
-        "I build scalable, reliable and user-friendly web applications using modern technologies.",
-
-    experience: "3+ Years of Experience",
-
+  personal: {
+    name: 'Yubraj Sahoo',
+    email: 'yubraj2000yubraj@gmail.com',
+    phone: '+91 6370119126',
+    location: 'Odisha, India',
     avatar,
-
-    email: "yubraj2000yubraj@gmail.com",
-
-    phone: "+91 6370119126",
-
-    location: "Odisha, India",
-
-    resumeUrl: "/resume.pdf",
-
-    website: "https://yubrajsahoo.dev",
-
+  },
+  professional: {
+    role: 'Full Stack Java Developer',
+    experience: '3+ Years of Experience',
+    resumeUrl: '/resume.pdf',
+  },
+  application: {
+    greetings: "Hi, I'm",
+    logo,
+    website: 'https://yubrajsahoo.dev',
     copyright: `© ${new Date().getFullYear()} Yubraj Sahoo. All rights reserved.`,
+  },
+  content: {
+    tagline:
+      'I build scalable, reliable and user-friendly web applications using modern technologies.',
+  },
 };

@@ -6,26 +6,9 @@
  * @author Yubraj Sahoo
  */
 export interface AppInfo {
-    /** Greeting message */
-    greetings: string;
-
+  personal: {
     /** Portfolio owner name */
     name: string;
-
-    /** Application logo */
-    logo: string;
-
-    /** Professional title */
-    role: string;
-
-    /** Short introduction */
-    tagline: string;
-
-    /** Number of years of experience */
-    experience: string;
-
-    /** avatar */
-    avatar: string;
 
     /** Primary email */
     email: string;
@@ -36,12 +19,37 @@ export interface AppInfo {
     /** Current location */
     location: string;
 
+    /** avatar */
+    avatar: string;
+  };
+
+  professional: {
+    /** Professional title */
+    role: string;
+
+    /** Number of years of experience */
+    experience: string;
+
     /** Resume download URL */
     resumeUrl: string;
+  };
+
+  application: {
+    /** Greeting message */
+    greetings: string;
+
+    /** Application logo */
+    logo: string;
 
     /** Portfolio base URL */
     website: string;
 
     /** Footer copyright text */
     copyright: string;
+  };
+
+  content: {
+    /** Short introduction */
+    tagline: string;
+  };
 }

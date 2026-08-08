@@ -9,7 +9,7 @@ describe("HeroContent", () => {
         render(<HeroContent item={MOCKED_APP_INFO}/>);
 
         expect(
-            screen.getByText(MOCKED_APP_INFO.greetings)
+            screen.getByText(MOCKED_APP_INFO.application.greetings)
         ).toBeInTheDocument();
     });
 
@@ -19,7 +19,7 @@ describe("HeroContent", () => {
         expect(
             screen.getByRole("heading", {
                 level: 1,
-                name: MOCKED_APP_INFO.name,
+                name: MOCKED_APP_INFO.personal.name,
             })
         ).toBeInTheDocument();
     });
@@ -30,7 +30,7 @@ describe("HeroContent", () => {
         expect(
             screen.getByRole("heading", {
                 level: 4,
-                name: MOCKED_APP_INFO.role,
+                name: MOCKED_APP_INFO.professional.role,
             })
         ).toBeInTheDocument();
     });
@@ -39,7 +39,7 @@ describe("HeroContent", () => {
         render(<HeroContent item={MOCKED_APP_INFO}/>);
 
         expect(
-            screen.getByText(MOCKED_APP_INFO.experience)
+            screen.getByText(MOCKED_APP_INFO.professional.experience)
         ).toBeInTheDocument();
     });
 
@@ -47,7 +47,7 @@ describe("HeroContent", () => {
         render(<HeroContent item={MOCKED_APP_INFO}/>);
 
         expect(
-            screen.getByText(MOCKED_APP_INFO.tagline)
+            screen.getByText(MOCKED_APP_INFO.content.tagline)
         ).toBeInTheDocument();
     });
 
@@ -75,7 +75,7 @@ describe("HeroContent", () => {
         render(<HeroContent item={MOCKED_APP_INFO}/>);
 
         expect(
-            screen.getByText(MOCKED_APP_INFO.tagline)
+            screen.getByText(MOCKED_APP_INFO.content.tagline)
         ).toHaveClass("hero-tagline");
     });
 });

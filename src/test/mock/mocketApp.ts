@@ -1,17 +1,25 @@
-import type {AppInfo} from "../../types";
+import type { AppInfo } from '../../types';
 
 export const MOCKED_APP_INFO: AppInfo = {
+  personal: {
+    name: 'Yubraj Sahoo',
+    email: 'yubraj@example.com',
+    phone: '+91 9876543210',
+    location: 'Hyderabad, India',
+    avatar: '/avatar.png',
+  },
+  professional: {
+    role: 'Full Stack Java Developer',
+    experience: '3+ Years',
+    resumeUrl: '/resume.pdf',
+  },
+  application: {
     greetings: "Hi, I'm",
-    name: "Yubraj Sahoo",
-    logo: "/logo.png",
-    role: "Full Stack Java Developer",
-    tagline: "Building scalable applications",
-    experience: "3+ Years",
-    avatar: "/avatar.png",
-    email: "yubraj@example.com",
-    phone: "+91 9876543210",
-    location: "Hyderabad, India",
-    resumeUrl: "/resume.pdf",
-    website: "https://yubraj.dev",
-    copyright: "© 2026 Yubraj Sahoo"
+    logo: '/logo.png',
+    website: 'https://yubraj.dev',
+    copyright: '© 2026 Yubraj Sahoo',
+  },
+  content: {
+    tagline: 'Building scalable applications',
+  },
 };

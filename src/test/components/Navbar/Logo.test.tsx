@@ -18,14 +18,14 @@ describe("Logo", () => {
         const image = screen.getByAltText("Logo");
 
         expect(image).toBeInTheDocument();
-        expect(image).toHaveAttribute("src", MOCKED_APP_INFO.logo);
+        expect(image).toHaveAttribute("src", MOCKED_APP_INFO.application.logo);
     });
 
     test("renders the application name", () => {
         render(<Logo/>);
 
         expect(
-            screen.getByText(MOCKED_APP_INFO.name)
+            screen.getByText(MOCKED_APP_INFO.personal.name)
         ).toBeInTheDocument();
     });
 

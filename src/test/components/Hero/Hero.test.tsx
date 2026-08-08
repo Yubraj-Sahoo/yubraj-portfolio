@@ -20,7 +20,7 @@ describe("Hero", () => {
         render(<Hero/>);
 
         expect(
-            screen.getByText(APP_INFO.name)
+            screen.getByText(APP_INFO.personal.name)
         ).toBeInTheDocument();
     });
 
