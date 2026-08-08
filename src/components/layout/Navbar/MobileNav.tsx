@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useRef, useEffect} from "react";
 import {APP_INFO, NAV_LINKS} from "../../../data";
 import {Logo} from "./Logo";
 import {GiHamburgerMenu} from "react-icons/gi";
@@ -13,12 +13,36 @@ interface MobileNavProps {
 const MobileNav = ({activeNavItem: controlledActiveNavItem, onActiveNavItemChange}: MobileNavProps) => {
     const [open, setOpen] = useState(false);
     const [internalActiveNavItem, setInternalActiveNavItem] = useState("home");
+    const touchStartX = useRef(0);
     const activeNavItem = controlledActiveNavItem ?? internalActiveNavItem;
 
     const setActiveNavItem = (itemId: string) => {
         setInternalActiveNavItem(itemId);
         onActiveNavItemChange?.(itemId);
     };
+
+    useEffect(() => {
+        const handleTouchStart = (e: TouchEvent) => {
+            touchStartX.current = e.touches[0].clientX;
+        };
+
+        const handleTouchEnd = (e: TouchEvent) => {
+            const touchEndX = e.changedTouches[0].clientX;
+            const swipeDistance = touchEndX - touchStartX.current;
+            
+            if (swipeDistance > 50 && touchStartX.current < 30) {
+                setOpen(true);
+            }
+        };
+
+        window.addEventListener('touchstart', handleTouchStart);
+        window.addEventListener('touchend', handleTouchEnd);
+
+        return () => {
+            window.removeEventListener('touchstart', handleTouchStart);
+            window.removeEventListener('touchend', handleTouchEnd);
+        };
+    }, []);
 
     const hamburgerIcon = (
         <GiHamburgerMenu
