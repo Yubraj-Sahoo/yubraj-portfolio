@@ -4,7 +4,7 @@ import './About.css';
 
 export const About = () => {
     return (
-        <section id="about" className="app-components main-component-container about-section">
+        <section id="about" className="main_section about-section">
             <div className="row align-items-center g-5">
                 <div className="col-lg-6">
                     <Content/>

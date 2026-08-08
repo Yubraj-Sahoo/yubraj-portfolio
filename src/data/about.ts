@@ -14,7 +14,7 @@ export const ABOUT_CONTENT: AboutContent = {
 
 export const ABOUT_STATISTICS: Statistic[] = [
     {icon: FiClock, value: '3+', label: 'Years Experience'},
-    {icon: FiAward, value: '15+', label: 'Projects Completed'},
+    {icon: FiAward, value: '10+', label: 'Projects Completed'},
     {icon: FiLayers, value: '10+', label: 'Technologies'},
     {icon: FiTarget, value: '100%', label: 'Commitment'},
 ];

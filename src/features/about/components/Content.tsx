@@ -4,7 +4,7 @@ import {Button} from '../../../components/ui';
 export const Content = () => {
     return (
         <div>
-            <p className="about-section__eyebrow">{ABOUT_CONTENT.eyebrow}</p>
+            <p className="section__eyebrow">{ABOUT_CONTENT.eyebrow}</p>
             <h2 className="about-section__title">{ABOUT_CONTENT.title}</h2>
             <span className="about-section__title-line" aria-hidden="true"/>
 
@@ -16,7 +16,7 @@ export const Content = () => {
                 ))}
             </div>
 
-            <Button href={ABOUT_CONTENT.ctaHref} size="sm" radius="circle-1" className="about-section__button">
+            <Button href={ABOUT_CONTENT.ctaHref} size="md" radius="circle-1" className="about-section__button">
                 {ABOUT_CONTENT.ctaLabel}
             </Button>
         </div>

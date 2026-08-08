@@ -9,7 +9,7 @@ import {downloadResume} from "../../../services/resume.ts";
 
 export const Hero = () => {
     return (
-        <section id="home" className="app-components main-component-container hero-section">
+        <section id="home" className="main_section hero-section">
             <div className="row align-items-center g-4 g-xl-5">
                 <div className="col-lg-6 order-2 order-lg-1 hero-section__content">
                     <HeroContent key={APP_INFO.personal.name} item={APP_INFO}/>
