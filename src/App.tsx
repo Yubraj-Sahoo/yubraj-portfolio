@@ -1,7 +1,7 @@
 import './App.css'
-import {Navbar} from "./components/Navbar";
-import {Hero} from "./components/Hero";
-import {About} from "./components/About";
+import {Navbar} from "./components/layout/Navbar";
+import {Hero} from "./features/home";
+import {About} from "./features/about";
 
 function App() {
 
