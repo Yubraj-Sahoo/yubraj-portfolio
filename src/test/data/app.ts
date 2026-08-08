@@ -22,4 +22,7 @@ export const MOCKED_APP_INFO: AppInfo = {
   content: {
     tagline: 'Building scalable applications',
   },
+  config:{
+    showHireButton: true,
+  }
 };
