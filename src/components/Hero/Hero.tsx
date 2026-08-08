@@ -1,5 +1,5 @@
 import {HeroContent} from "./HeroContent.tsx";
-import {APP_INFO} from "../../data";
+import {APP_INFO, HERO_ACTIONS} from "../../data";
 
 import './Hero.css'
 import {Avatar} from "./Avatar.tsx";
@@ -9,23 +9,24 @@ import {downloadResume} from "../../api/resumeApi.ts";
 
 export const Hero = () => {
     return (
-        <>
-            <section id="home"
-                className={`app-components main-component-container d-flex  flex-column-reverse flex-lg-row justify-content-between align-items-center`}>
-                <div className={`px-xl-5`}>
+        <section id="home" className="app-components main-component-container hero-section">
+            <div className="row align-items-center g-4 g-xl-5">
+                <div className="col-lg-6 order-2 order-lg-1 hero-section__content">
                     <HeroContent key={APP_INFO.personal.name} item={APP_INFO}/>
-                    <Button
-                        key={`resume`}
-                        radius={`circle-2`}
-                        children={"Download Resume"}
-                        onClick={downloadResume}
-                    />
+                    <div className="hero-section__actions">
+                        <Button radius="circle-1" onClick={downloadResume}>
+                            {HERO_ACTIONS.resumeLabel}
+                        </Button>
+                        <Button href={HERO_ACTIONS.contactHref} variant="ghost" outlined radius="circle-1">
+                            {HERO_ACTIONS.contactLabel}
+                        </Button>
+                    </div>
                     <Technologies/>
                 </div>
-                <div>
+                <div className="col-lg-6 order-1 order-lg-2">
                     <Avatar key={APP_INFO.personal.name} item={APP_INFO}/>
                 </div>
-            </section>
-        </>
+            </div>
+        </section>
     );
 };

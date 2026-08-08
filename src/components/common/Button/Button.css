@@ -182,3 +182,11 @@
 .app-btn-ghost.app-btn-outlined {
     border-color: var(--color-button-ghost-text);
 }
+
+@media (hover: hover) and (pointer: fine) {
+    .app-btn-ghost.app-btn-outlined:hover {
+        background: var(--color-button-primary) !important;
+        border-color: var(--color-button-primary);
+        color: var(--color-button-primary-text);
+    }
+}
