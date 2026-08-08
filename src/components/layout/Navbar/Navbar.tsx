@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import {Logo} from "./Logo";
 import {NavItem} from "./NavItem";
 import {NAV_LINKS} from "../../../data";
+import {APP_INFO} from "../../../data";
 import MobileNav from "./MobileNav";
 import {useActiveNavItem} from "../../../hooks/useActiveNavItem";
 
@@ -47,9 +48,11 @@ const Navbar = () => {
                                     onClick={() => setActiveNavItem(item.id)}
                                 />
                             ))}
-                            <Button key={`hire`} variant={`primary`} size={`sm`} radius={`circle-1`} href="#hire">
-                                Hire Me
-                            </Button>
+                            {APP_INFO.config.showHireButton && (
+                                <Button key={`hire`} variant={`primary`} size={`sm`} radius={`circle-1`} href="#hire">
+                                    Hire Me
+                                </Button>
+                            )}
                         </ul>
                     </>
                 )}

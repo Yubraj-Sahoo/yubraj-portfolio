@@ -32,4 +32,7 @@ export const APP_INFO: AppInfo = {
         tagline:
             'I build scalable, reliable and user-friendly web applications using modern technologies.',
     },
+    config: {
+        showHireButton: false,
+    },
 };

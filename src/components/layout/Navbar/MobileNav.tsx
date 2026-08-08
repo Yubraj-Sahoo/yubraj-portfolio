@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {NAV_LINKS} from "../../../data";
+import {APP_INFO, NAV_LINKS} from "../../../data";
 import {Logo} from "./Logo";
 import {GiHamburgerMenu} from "react-icons/gi";
 import {AiOutlineClose} from "react-icons/ai";
@@ -61,10 +61,12 @@ const MobileNav = ({activeNavItem: controlledActiveNavItem, onActiveNavItemChang
                         </a>
                     </li>
                 ))}
-                <Button key={`hire-mobile`} variant={`primary`} size={`sm`} radius={`circle-1`} href="#hire"
-                        onClick={handleHireMeClick}>
-                    Hire Me
-                </Button>
+                {APP_INFO.config.showHireButton && (
+                    <Button key={`hire-mobile`} variant={`primary`} size={`sm`} radius={`circle-1`} href="#hire"
+                            onClick={handleHireMeClick}>
+                        Hire Me
+                    </Button>
+                )}
             </ul>
         </div>
     );

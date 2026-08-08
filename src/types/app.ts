@@ -53,4 +53,8 @@ export interface AppInfo {
         tagline: string;
 
     };
+
+    config:{
+        showHireButton: boolean;
+    };
 }

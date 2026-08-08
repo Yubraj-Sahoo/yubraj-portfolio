@@ -16,7 +16,7 @@ export const NAV_LINKS: NavLink[] = [
         label: "Skills",
         href: "#skills",
     },
-    {
+    /*{
         id: "experience",
         label: "Experience",
         href: "#experience",
@@ -30,5 +30,5 @@ export const NAV_LINKS: NavLink[] = [
         id: "contact",
         label: "Contact",
         href: "#contact",
-    },
+    },*/
 ]
