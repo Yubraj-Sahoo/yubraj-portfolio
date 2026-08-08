@@ -1,1 +1,3 @@
-export {About} from './components/About.tsx'
+export * from './components/About';
+export * from './components/Content';
+export * from './components/Statistics';
