@@ -194,6 +194,13 @@
     .technology-item { height: 3rem; width: 3rem; }
     .technology-icon { font-size: 1.65rem; }
     .avatar-container { max-width: 19rem; min-height: 17rem; }
-    .avatar-container__frame { border-radius: 1.5rem; width: min(100%, 18rem); }
-    .avatar-container__frame::after { border-radius: 1.25rem; }
+    .avatar-container__frame {
+        border-radius: 1.5rem;
+        width: min(100%, 18rem);
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        transform: none;
+    }
+    .avatar-container__frame::after { display: none; }
 }
