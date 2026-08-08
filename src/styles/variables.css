@@ -58,4 +58,10 @@
     --color-icon-color-hover: rgba(255, 255, 255, .05);
     --color-icon-color-box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
 
+    /* ===========================
+       Progress Bar
+    =========================== */
+    --color-progress-bg: rgba(255, 255, 255, 0.1);
+    --color-progress-bar: #0630f4;
+    --color-progress-bar-end: #db0cea;
 }

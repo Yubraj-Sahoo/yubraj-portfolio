@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
-import { Statistics } from '../../../features/about/components/Statistics';
+import { Statistics } from '../../../features/about';
 import { ABOUT_STATISTICS } from '../../../data';
 
 // Mock the icons
@@ -16,8 +16,9 @@ describe('Statistics component', () => {
     render(<Statistics />);
     
     ABOUT_STATISTICS.forEach(stat => {
-      expect(screen.getByText(stat.value)).toBeInTheDocument();
       expect(screen.getByText(stat.label)).toBeInTheDocument();
+      const valueElement = screen.getAllByText(stat.value);
+      expect(valueElement.length).toBeGreaterThan(0);
     });
 
     // Check if icons are rendered

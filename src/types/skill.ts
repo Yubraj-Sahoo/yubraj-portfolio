@@ -1,3 +1,5 @@
+import type {IconType} from "react-icons";
+
 /**
  * Represents the content for the skills section.
  */
@@ -6,8 +8,6 @@ export interface SkillContent {
     eyebrow: string;
     /** The main title of the skills section. */
     title: string;
-    /** The icon associated with the skills section. */
-    icon: string;
     /** An array of skill types and their details. */
     skillDetails: SkillType[];
 }
@@ -18,6 +18,8 @@ export interface SkillContent {
 export interface SkillType {
     /** The type or category of the skills. */
     type: string;
+    /** The icon associated with the skills section. */
+    icon: IconType;
     /** An array of skills belonging to this type. */
     skills: Skill[];
 }
