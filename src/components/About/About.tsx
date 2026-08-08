@@ -1,18 +1,19 @@
-import {Content} from "./Content.tsx";
-import {Statistics} from "./Statistics.tsx";
+import {Content} from './Content.tsx';
+import {Statistics} from './Statistics.tsx';
+import './About.css';
 
 export const About = () => {
     return (
-        <>
-            <div
-                className={`app-components main-component-container`}
-            >
-                <h4 className={`text-primary`}>ABOUT ME</h4>
-                <div className={`d-flex  flex-column flex-lg-row justify-content-between align-items-center`}>
+        <section id="about" className="app-components main-component-container about-section">
+            <div className="row align-items-center g-5">
+                <div className="col-lg-6">
                     <Content/>
+                </div>
+
+                <div className="col-lg-6">
                     <Statistics/>
                 </div>
             </div>
-        </>
+        </section>
     );
 };

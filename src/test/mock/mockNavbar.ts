@@ -17,6 +17,11 @@ export const MOCKED_NAV_LINKS: NavLink[] = [
         href: "#skills",
     },
     {
+        id: "experience",
+        label: "Experience",
+        href: "#experience",
+    },
+    {
         id: "projects",
         label: "Projects",
         href: "#projects",

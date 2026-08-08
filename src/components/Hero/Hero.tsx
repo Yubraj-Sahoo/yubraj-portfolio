@@ -10,10 +10,10 @@ import {downloadResume} from "../../api/resumeApi.ts";
 export const Hero = () => {
     return (
         <>
-            <section
+            <section id="home"
                 className={`app-components main-component-container d-flex  flex-column-reverse flex-lg-row justify-content-between align-items-center`}>
                 <div className={`px-xl-5`}>
-                    <HeroContent key={APP_INFO.name} item={APP_INFO}/>
+                    <HeroContent key={APP_INFO.personal.name} item={APP_INFO}/>
                     <Button
                         key={`resume`}
                         radius={`circle-2`}
@@ -23,7 +23,7 @@ export const Hero = () => {
                     <Technologies/>
                 </div>
                 <div>
-                    <Avatar key={APP_INFO.name} item={APP_INFO}/>
+                    <Avatar key={APP_INFO.personal.name} item={APP_INFO}/>
                 </div>
             </section>
         </>

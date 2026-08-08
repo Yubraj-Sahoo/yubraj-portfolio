@@ -44,6 +44,13 @@ describe("Navbar", () => {
         ).toBeInTheDocument();
     });
 
+    test("renders the Experience link with its section target", () => {
+        render(<Navbar/>);
+
+        expect(screen.getByRole("link", {name: "Experience"}))
+            .toHaveAttribute("href", "#experience");
+    });
+
     test("marks clicked nav item as active", () => {
         render(<Navbar/>);
 

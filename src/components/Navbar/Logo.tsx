@@ -12,7 +12,7 @@ interface Props {
 export const Logo = ({ onClick }: Props) => {
   return (
     <>
-      <a className={`navbar-brand logo`} href="#" onClick={onClick}>
+      <a className={`navbar-brand logo`} href="#home" onClick={onClick}>
         <img
           src={APP_INFO.application.logo}
           alt="Logo"

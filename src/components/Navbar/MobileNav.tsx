@@ -5,9 +5,20 @@ import {GiHamburgerMenu} from "react-icons/gi";
 import {AiOutlineClose} from "react-icons/ai";
 import {Button} from "../common/Button";
 
-const MobileNav = () => {
+interface MobileNavProps {
+    activeNavItem?: string;
+    onActiveNavItemChange?: (itemId: string) => void;
+}
+
+const MobileNav = ({activeNavItem: controlledActiveNavItem, onActiveNavItemChange}: MobileNavProps) => {
     const [open, setOpen] = useState(false);
-    const [activeNavItem, setActiveNavItem] = useState("home");
+    const [internalActiveNavItem, setInternalActiveNavItem] = useState("home");
+    const activeNavItem = controlledActiveNavItem ?? internalActiveNavItem;
+
+    const setActiveNavItem = (itemId: string) => {
+        setInternalActiveNavItem(itemId);
+        onActiveNavItemChange?.(itemId);
+    };
 
     const hamburgerIcon = (
         <GiHamburgerMenu

@@ -3,6 +3,7 @@ import {Logo} from "./Logo";
 import {NavItem} from "./NavItem";
 import {NAV_LINKS} from "../../data";
 import MobileNav from "./MobileNav";
+import {useActiveNavItem} from "./useActiveNavItem.tsx";
 
 import "./Navbar.css";
 import {Button} from "../common/Button";
@@ -14,7 +15,7 @@ import {Button} from "../common/Button";
  * @author Yubraj Sahoo
  */
 const Navbar = () => {
-    const [activeNavItem, setActiveNavItem] = useState("home");
+    const {activeNavItem, setActiveNavItem} = useActiveNavItem();
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
     useEffect(() => {
@@ -33,7 +34,7 @@ const Navbar = () => {
         <nav className={`navbar fixed-top nav-color app-components`}>
             <div className={`container-fluid navbar-pad`}>
                 {isMobile ? (
-                    <MobileNav/>
+                    <MobileNav activeNavItem={activeNavItem} onActiveNavItemChange={setActiveNavItem}/>
                 ) : (
                     <>
                         <Logo onClick={() => setActiveNavItem("home")}/>

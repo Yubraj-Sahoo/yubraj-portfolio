@@ -4,7 +4,7 @@ export const NAV_LINKS: NavLink[] = [
     {
         id: "home",
         label: "Home",
-        href: "#"
+        href: "#home"
     },
     {
         id: "about",
@@ -15,6 +15,11 @@ export const NAV_LINKS: NavLink[] = [
         id: "skills",
         label: "Skills",
         href: "#skills",
+    },
+    {
+        id: "experience",
+        label: "Experience",
+        href: "#experience",
     },
     {
         id: "projects",

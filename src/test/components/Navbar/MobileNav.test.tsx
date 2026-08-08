@@ -53,6 +53,13 @@ describe("MobileNav", () => {
         });
     });
 
+    test("renders the Experience link with its section target", () => {
+        render(<MobileNav/>);
+
+        expect(screen.getByRole("link", {name: "Experience"}))
+            .toHaveAttribute("href", "#experience");
+    });
+
     test("clicking navigation link closes menu", async () => {
         const user = userEvent.setup();
 

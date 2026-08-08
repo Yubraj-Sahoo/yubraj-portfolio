@@ -35,7 +35,7 @@ describe("Logo", () => {
         const link = screen.getByRole("link");
 
         expect(link).toBeInTheDocument();
-        expect(link).toHaveAttribute("href", "#");
+        expect(link).toHaveAttribute("href", "#home");
     });
 
     test("calls onClick when clicked", async () => {
