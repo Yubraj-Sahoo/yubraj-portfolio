@@ -1,113 +1,215 @@
-import {useState, useRef, useEffect} from "react";
-import {APP_INFO, NAV_LINKS} from "../../../data";
-import {Logo} from "./Logo";
-import {GiHamburgerMenu} from "react-icons/gi";
-import {AiOutlineClose} from "react-icons/ai";
-import {Button} from "../../ui";
+import { useEffect, useRef, useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
+import { GiHamburgerMenu } from "react-icons/gi";
+
+import { APP_INFO, NAV_LINKS } from "../../../data";
+import { Button } from "../../ui";
+import { Logo } from "./Logo";
 
 interface MobileNavProps {
     activeNavItem?: string;
     onActiveNavItemChange?: (itemId: string) => void;
 }
 
-const MobileNav = ({activeNavItem: controlledActiveNavItem, onActiveNavItemChange}: MobileNavProps) => {
+/**
+ * Mobile navigation component.
+ *
+ * Provides:
+ * - Hamburger menu toggle
+ * - Swipe-from-left gesture to open the menu
+ * - Click-outside support
+ * - Active navigation item handling
+ * - Hire Me button
+ */
+const MobileNav = ({
+                       activeNavItem: controlledActiveNavItem,
+                       onActiveNavItemChange,
+                   }: MobileNavProps) => {
     const [open, setOpen] = useState(false);
-    const [internalActiveNavItem, setInternalActiveNavItem] = useState("home");
+    const [internalActiveNavItem, setInternalActiveNavItem] =
+        useState("home");
+
     const touchStartX = useRef(0);
     const mobileNavRef = useRef<HTMLDivElement>(null);
-    const activeNavItem = controlledActiveNavItem ?? internalActiveNavItem;
 
+    const activeNavItem =
+        controlledActiveNavItem ?? internalActiveNavItem;
+
+    /**
+     * Updates the active navigation item.
+     */
     const setActiveNavItem = (itemId: string) => {
         setInternalActiveNavItem(itemId);
         onActiveNavItemChange?.(itemId);
     };
 
+    /**
+     * Opens the menu when the user swipes
+     * from the left edge of the screen.
+     */
     useEffect(() => {
-        const handleTouchStart = (e: TouchEvent) => {
-            touchStartX.current = e.touches[0].clientX;
+        const handleTouchStart = (event: TouchEvent) => {
+            touchStartX.current = event.touches[0].clientX;
         };
 
-        const handleTouchEnd = (e: TouchEvent) => {
-            const touchEndX = e.changedTouches[0].clientX;
-            const swipeDistance = touchEndX - touchStartX.current;
-            
-            if (swipeDistance > 50 && touchStartX.current < 30) {
-                e.preventDefault();
+        const handleTouchEnd = (event: TouchEvent) => {
+            const touchEndX = event.changedTouches[0].clientX;
+            const swipeDistance =
+                touchEndX - touchStartX.current;
+
+            if (
+                swipeDistance > 50 &&
+                touchStartX.current < 30
+            ) {
+                event.preventDefault();
                 setOpen(true);
             }
         };
 
-        window.addEventListener('touchstart', handleTouchStart, false);
-        window.addEventListener('touchend', handleTouchEnd, { passive: false } as EventListenerOptions);
+        window.addEventListener(
+            "touchstart",
+            handleTouchStart,
+            false
+        );
+
+        window.addEventListener(
+            "touchend",
+            handleTouchEnd,
+            { passive: false }
+        );
 
         return () => {
-            window.removeEventListener('touchstart', handleTouchStart);
-            window.removeEventListener('touchend', handleTouchEnd);
+            window.removeEventListener(
+                "touchstart",
+                handleTouchStart
+            );
+
+            window.removeEventListener(
+                "touchend",
+                handleTouchEnd
+            );
         };
     }, []);
 
+    /**
+     * Closes the menu when clicking outside
+     * the mobile navigation.
+     */
     useEffect(() => {
-        const handleClickOutside = (e: MouseEvent) => {
-            if (mobileNavRef.current && !mobileNavRef.current.contains(e.target as Node)) {
+        if (!open) {
+            return;
+        }
+
+        const handleClickOutside = (event: MouseEvent) => {
+            const target = event.target as Node;
+
+            if (
+                mobileNavRef.current &&
+                !mobileNavRef.current.contains(target)
+            ) {
                 setOpen(false);
             }
         };
 
-        if (open) {
-            document.addEventListener('click', handleClickOutside);
-        }
+        document.addEventListener(
+            "mousedown",
+            handleClickOutside
+        );
 
         return () => {
-            document.removeEventListener('click', handleClickOutside);
+            document.removeEventListener(
+                "mousedown",
+                handleClickOutside
+            );
         };
     }, [open]);
 
-    const hamburgerIcon = (
-        <GiHamburgerMenu
-            className="hamburger"
-            size="30px"
-            onClick={() => setOpen(!open)}
-        />
-    );
-
-    const closeIcon = (
-        <AiOutlineClose
-            className="hamburger"
-            size="30px"
-            onClick={() => setOpen(!open)}
-        />
-    );
-
+    /**
+     * Handles navigation link click.
+     */
     const handleLinkClick = (itemId: string) => {
         setActiveNavItem(itemId);
         setOpen(false);
     };
 
+    /**
+     * Handles Hire Me button click.
+     */
     const handleHireMeClick = () => {
         setOpen(false);
     };
 
     return (
-        <div className="mobile-nav" ref={mobileNavRef}>
-            <Logo onClick={() => setActiveNavItem("home")}/>
-            {open ? closeIcon : hamburgerIcon}
-            <ul className={`mobile-nav-links ${open ? "open" : ""}`}>
+        <div
+            className="mobile-nav"
+            ref={mobileNavRef}
+        >
+            <Logo
+                onClick={() => {
+                    setActiveNavItem("home");
+                    setOpen(false);
+                }}
+            />
+
+            <button
+                type="button"
+                className="mobile-nav-toggle"
+                aria-label={
+                    open
+                        ? "Close navigation menu"
+                        : "Open navigation menu"
+                }
+                aria-expanded={open}
+                onClick={() => setOpen((previous) => !previous)}
+            >
+                {open ? (
+                    <AiOutlineClose
+                        className="hamburger"
+                        size={30}
+                    />
+                ) : (
+                    <GiHamburgerMenu
+                        className="hamburger"
+                        size={30}
+                    />
+                )}
+            </button>
+
+            <ul
+                className={`mobile-nav-links ${
+                    open ? "open" : ""
+                }`}
+            >
                 {NAV_LINKS.map((item) => (
                     <li key={item.id}>
                         <a
                             href={item.href}
-                            className={activeNavItem === item.id ? "active" : ""}
-                            onClick={() => handleLinkClick(item.id)}
+                            className={
+                                activeNavItem === item.id
+                                    ? "active"
+                                    : ""
+                            }
+                            onClick={() =>
+                                handleLinkClick(item.id)
+                            }
                         >
                             {item.label}
                         </a>
                     </li>
                 ))}
+
                 {APP_INFO.config.showHireButton && (
-                    <Button key={`hire-mobile`} variant={`primary`} size={`sm`} radius={`circle-1`} href="#hire"
-                            onClick={handleHireMeClick}>
-                        Hire Me
-                    </Button>
+                    <li>
+                        <Button
+                            variant="primary"
+                            size="sm"
+                            radius="circle-1"
+                            href="#hire"
+                            onClick={handleHireMeClick}
+                        >
+                            Hire Me
+                        </Button>
+                    </li>
                 )}
             </ul>
         </div>

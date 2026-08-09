@@ -1,24 +1,25 @@
 /* ===========================
    Navbar
-=========================== */
+   =========================== */
 
 .nav-color {
     background: var(--color-bg-nav);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .navbar-pad {
     padding: 0 1rem !important;
 }
 
+
 /* ===========================
    Logo
-=========================== */
+   =========================== */
 
 .logo {
     display: flex;
     align-items: center;
-    gap: .6rem;
+    gap: 0.6rem;
 }
 
 .logo span {
@@ -28,15 +29,16 @@
     font-family: "Courier New", monospace;
 }
 
+
 /* ===========================
-   Navigation Links
-=========================== */
+   Desktop Navigation Links
+   =========================== */
 
 .nav-link {
     color: var(--color-link) !important;
     font-weight: 500;
     position: relative;
-    transition: all .25s ease;
+    transition: all 0.25s ease;
 }
 
 .nav-link.active {
@@ -44,20 +46,21 @@
     font-weight: 600;
 }
 
+
 /* Underline Animation */
 
 .nav-link::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: .2rem;
+    bottom: 0.2rem;
 
     width: 0;
     height: 2px;
 
     background: var(--color-link-active);
 
-    transition: width .3s ease;
+    transition: width 0.3s ease;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -70,63 +73,147 @@
     width: 100%;
 }
 
-/*mobile view*/
+
+/* ===========================
+   Mobile Navigation
+   =========================== */
+
 .mobile-nav {
     width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     position: relative;
-    z-index: 100;
+
+    z-index: 1000;
+}
+
+
+/* ===========================
+   Mobile Menu Button
+   =========================== */
+
+.mobile-nav-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    color: var(--color-link);
+
+    z-index: 10001;
 }
 
 .hamburger {
-    cursor: pointer;
+    display: block;
     color: var(--color-link);
-    z-index: 101;
+
+    transition:
+            color 0.25s ease,
+            transform 0.25s ease;
 }
+
+.mobile-nav-toggle:hover .hamburger {
+    color: var(--color-link-active);
+}
+
+
+/* ===========================
+   Mobile Navigation Menu
+   =========================== */
 
 .mobile-nav-links {
     position: fixed;
+
     top: 4.5rem;
     left: 0;
     bottom: 0;
-    width: fit-content;
-    background: var(--color-bg-nav);
+
+    min-width: 180px;
+
+    margin: 0;
+    padding: 1.5rem 1.25rem;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
     gap: 2rem;
-    padding: 1rem;
-    margin: 0 0 0.1rem 0;
+
     list-style: none;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
+
+    background: var(--color-bg-nav);
+
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
+
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+
+    transform: translateX(-110%);
+
+    transition: transform 0.3s ease-in-out;
+
+    z-index: 10000;
 }
 
 .mobile-nav-links.open {
     transform: translateX(0);
 }
 
-.mobile-nav-links a {
-    color: var(--color-link);
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: all .25s ease;
-    position: relative;
+
+/* ===========================
+   Mobile Navigation Links
+   =========================== */
+
+.mobile-nav-links li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
+
+.mobile-nav-links a {
+    position: relative;
+
+    color: var(--color-link);
+
+    text-decoration: none;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    transition:
+            color 0.25s ease,
+            font-weight 0.25s ease;
+}
+
+
+/* Underline */
 
 .mobile-nav-links a::after {
     content: "";
+
     position: absolute;
+
     left: 0;
     bottom: -0.2rem;
+
     width: 0;
     height: 2px;
+
     background: var(--color-link-active);
-    transition: width .3s ease;
+
+    transition: width 0.3s ease;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -135,11 +222,25 @@
     }
 }
 
-.mobile-nav-links a.active::after {
-    width: 100%;
-}
+
+/* Active link */
 
 .mobile-nav-links a.active {
     color: var(--color-link-active);
     font-weight: 600;
+}
+
+.mobile-nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* ===========================
+   Mobile Only
+   =========================== */
+
+@media (min-width: 992px) {
+    .mobile-nav {
+        display: none;
+    }
 }
