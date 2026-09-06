@@ -3,12 +3,12 @@ import {render, screen} from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 // MUST come before Hero import
-vi.mock("../../../services/resume", () => ({
+vi.mock("../../../api/v1/services/resume", () => ({
     downloadResume: vi.fn(),
 }));
 
 import {Hero} from "../../../features/home";
-import {downloadResume} from "../../../services/resume";
+import {downloadResume} from "../../../api/v1/services/resume";
 import {APP_INFO} from "../../../data";
 
 describe("Hero", () => {

@@ -1,6 +1,4 @@
 import type {AppInfo} from '../types';
-import logo from '../../public/favicon.png';
-import avatar from '../assets/images/avatar.png';
 
 /**
  * Application information.
@@ -15,7 +13,7 @@ export const APP_INFO: AppInfo = {
         email: 'yubraj2000yubraj@gmail.com',
         phone: '+91 6370119126',
         location: 'Odisha, India',
-        avatar,
+        avatar: "https://res.cloudinary.com/ojlrwmxy/image/upload/v1788723215/dev-portfolio/upload/image/avatar.png",
     },
     professional: {
         role: 'Full Stack Java Developer',
@@ -24,8 +22,8 @@ export const APP_INFO: AppInfo = {
     },
     application: {
         greetings: "Hi, I'm",
-        logo,
-        website: 'https://yubrajsahoo.dev',
+        logo: "https://res.cloudinary.com/ojlrwmxy/image/upload/v1788723186/dev-portfolio/upload/image/logo.png",
+        website: "https://yubraj-portfolio.pages.dev",
         copyright: `© ${new Date().getFullYear()} Yubraj Sahoo. All rights reserved.`,
     },
     content: {
@@ -34,8 +32,8 @@ export const APP_INFO: AppInfo = {
     },
     config: {
         showHireButton: false,
-        enableResume: false,
+        enableResume: true,
         enableContact: false,
-        enableExperience:false,
+        enableExperience: false,
     },
 };

@@ -5,7 +5,7 @@ import './Hero.css'
 import {Avatar} from "./Avatar.tsx";
 import {Technologies} from "./Technologies.tsx";
 import {Button} from "../../../components/ui";
-import {downloadResume} from "../../../services/resume.ts";
+import {downloadResume} from "../../../api/v1/services/resume.ts";
 
 export const Hero = () => {
     return (
