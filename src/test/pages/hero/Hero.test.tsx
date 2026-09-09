@@ -7,7 +7,7 @@ vi.mock("../../../api/v1/services/resume", () => ({
     downloadResume: vi.fn(),
 }));
 
-import {Hero} from "../../../features/home";
+import {Hero} from "../../../pages/hero";
 import {downloadResume} from "../../../api/v1/services/resume";
 import {APP_INFO} from "../../../data";
 

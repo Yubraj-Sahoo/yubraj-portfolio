@@ -1,7 +1,7 @@
 import {describe, expect, test} from "vitest";
 import {render, screen} from "@testing-library/react";
 
-import {HeroContent} from "../../../features/home/components/HeroContent";
+import {HeroContent} from "../../../pages/hero/components/HeroContent";
 import {MOCKED_APP_INFO} from "../../data/app";
 
 describe("HeroContent", () => {

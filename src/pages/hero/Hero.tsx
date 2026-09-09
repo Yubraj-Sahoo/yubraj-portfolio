@@ -1,11 +1,11 @@
-import {HeroContent} from "./HeroContent.tsx";
-import {APP_INFO, HERO_ACTIONS} from "../../../data";
+import {HeroContent} from "./components/HeroContent.tsx";
+import {APP_INFO, HERO_ACTIONS} from "../../data";
 
 import './Hero.css'
-import {Avatar} from "./Avatar.tsx";
-import {Technologies} from "./Technologies.tsx";
-import {Button} from "../../../components/ui";
-import {downloadResume} from "../../../api/v1/services/resume.ts";
+import {Avatar} from "./components/Avatar.tsx";
+import {Technologies} from "./components/Technologies.tsx";
+import {Button} from "../../components/ui";
+import {downloadResume} from "../../api/v1/services/resume.ts";
 
 export const Hero = () => {
     return (

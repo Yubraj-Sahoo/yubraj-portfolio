@@ -1,13 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
-import { About } from '../../../features/about';
+import { About } from '../../../pages/about';
 
 // Mock the child components directly because About.tsx imports them directly
-vi.mock('../../../features/about/components/Content', () => ({
+vi.mock('../../../pages/about/components/Content', () => ({
   Content: () => <div data-testid="content-mock"></div>,
 }));
 
-vi.mock('../../../features/about/components/Statistics', () => ({
+vi.mock('../../../pages/about/components/Statistics', () => ({
   Statistics: () => <div data-testid="statistics-mock"></div>,
 }));
 

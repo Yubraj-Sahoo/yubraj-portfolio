@@ -1,5 +1,5 @@
-import {Content} from './Content.tsx';
-import {Statistics} from './Statistics.tsx';
+import {Content} from './components/Content.tsx';
+import {Statistics} from './components/Statistics.tsx';
 import './About.css';
 
 export const About = () => {

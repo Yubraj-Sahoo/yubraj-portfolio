@@ -1,7 +1,7 @@
 import {describe, expect, test} from "vitest";
 import {render, screen} from "@testing-library/react";
 
-import {Technologies} from "../../../features/home/components/Technologies";
+import {Technologies} from "../../../pages/hero/components/Technologies";
 import {MOCKED_WORKED_TECHNOLOGIES} from "../../data/technologies.ts";
 
 describe("Technologies", () => {

@@ -1,5 +1,5 @@
-import {TECHNICAL_EXPERTISE} from "../../../data";
-import {SkillType} from "./SkillType.tsx";
+import {TECHNICAL_EXPERTISE} from "../../data";
+import {SkillType} from "./components/SkillType.tsx";
 
 export const Skills = () => {
     return (

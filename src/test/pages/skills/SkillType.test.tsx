@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { vi } from "vitest";
-import { SkillType } from "../../../features/skills/components/SkillType";
+import { SkillType } from "../../../pages/skills/components/SkillType";
 import { TECHNICAL_EXPERTISE } from "../../data/skills";
 
 // Mock the react-icons to prevent errors in the test environment
