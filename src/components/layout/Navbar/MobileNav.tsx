@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-import { APP_INFO, NAV_LINKS } from "../../../data";
+import { APP_INFO, NAV_LINKS } from "../../../models";
 import { Button } from "../../ui";
 import { Logo } from "./Logo";
 

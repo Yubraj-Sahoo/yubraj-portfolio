@@ -8,7 +8,7 @@ import {
 } from "@testing-library/react";
 
 import {Navbar} from "../../../../components/layout/Navbar";
-import {MOCKED_NAV_LINKS} from "../../../data/navbar";
+import {MOCKED_NAV_LINKS} from "../../../models/navbar";
 
 describe("Navbar", () => {
     beforeEach(() => {

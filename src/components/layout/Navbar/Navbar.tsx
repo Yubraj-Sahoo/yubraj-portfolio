@@ -1,8 +1,8 @@
 import {useState, useEffect} from "react";
 import {Logo} from "./Logo";
 import {NavItem} from "./NavItem";
-import {NAV_LINKS} from "../../../data";
-import {APP_INFO} from "../../../data";
+import {NAV_LINKS} from "../../../models";
+import {APP_INFO} from "../../../models";
 import MobileNav from "./MobileNav";
 import {useActiveNavItem} from "../../../hooks/useActiveNavItem";
 

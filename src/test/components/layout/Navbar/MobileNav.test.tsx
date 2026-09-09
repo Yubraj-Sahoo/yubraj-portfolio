@@ -3,7 +3,7 @@ import {render, screen} from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import MobileNav from "../../../../components/layout/Navbar/MobileNav.tsx";
-import {MOCKED_NAV_LINKS} from "../../../data/navbar.ts";
+import {MOCKED_NAV_LINKS} from "../../../models/navbar.ts";
 
 describe("MobileNav", () => {
     test("renders logo", () => {

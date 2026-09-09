@@ -1,6 +1,0 @@
-export {APP_INFO} from './app.ts'
-export {NAV_LINKS} from './navbar.ts'
-export {WORKED_TECHNOLOGIES} from './technologies.ts'
-export {ABOUT_CONTENT, ABOUT_STATISTICS} from './about.ts'
-export {HERO_ACTIONS} from './hero.ts'
-export {TECHNICAL_EXPERTISE} from './skills.ts'

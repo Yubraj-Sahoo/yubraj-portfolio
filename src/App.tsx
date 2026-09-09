@@ -1,8 +1,8 @@
 import './App.css'
 import {Navbar} from "./components/layout/Navbar";
-import {Hero} from "./features/home";
-import {About} from "./features/about";
-import {Skills} from "./features/skills";
+import {Hero} from "./pages/hero";
+import {About} from "./pages/about";
+import {Skills} from "./pages/skills";
 
 function App() {
 

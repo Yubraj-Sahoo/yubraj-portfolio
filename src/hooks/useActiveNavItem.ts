@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {NAV_LINKS} from '../data';
+import {NAV_LINKS} from "../models";
 
 /** Tracks the navigation item whose matching section is currently in view. */
 export const useActiveNavItem = () => {

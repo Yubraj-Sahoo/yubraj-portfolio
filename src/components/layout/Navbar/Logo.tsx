@@ -1,4 +1,4 @@
-import { APP_INFO } from '../../../data';
+import { APP_INFO } from "../../../models";
 
 interface Props {
   onClick?: () => void;
