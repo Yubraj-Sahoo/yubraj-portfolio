@@ -1,4 +1,5 @@
 import type {AppInfo} from './types';
+import {cloudUrls} from '../cloud/data.ts';
 
 /**
  * Application information.
@@ -13,7 +14,7 @@ export const APP_INFO: AppInfo = {
         email: 'yubraj2000yubraj@gmail.com',
         phone: '+91 6370119126',
         location: 'Odisha, India',
-        avatar: "https://res.cloudinary.com/ojlrwmxy/image/upload/v1788723215/dev-portfolio/upload/image/avatar.png",
+        avatar: cloudUrls['avatar.png'],
     },
     professional: {
         role: 'Full Stack Java Developer',
@@ -22,7 +23,7 @@ export const APP_INFO: AppInfo = {
     },
     application: {
         greetings: "Hi, I'm",
-        logo: "https://res.cloudinary.com/ojlrwmxy/image/upload/v1788723186/dev-portfolio/upload/image/logo.png",
+        logo: cloudUrls['logo.png'],
         website: "https://yubraj-portfolio.pages.dev",
         copyright: `© ${new Date().getFullYear()} Yubraj Sahoo. All rights reserved.`,
     },
