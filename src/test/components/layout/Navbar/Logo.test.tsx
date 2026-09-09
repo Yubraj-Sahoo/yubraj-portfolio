@@ -2,7 +2,7 @@ import {describe, expect, test, vi} from "vitest";
 import {render, screen} from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import {MOCKED_APP_INFO} from "../../../data/app";
+import {MOCKED_APP_INFO} from "../../../models/app.ts";
 
 // Mock the data module before importing Logo
 vi.mock("../models", () => ({

@@ -2,7 +2,7 @@ import {describe, expect, test} from "vitest";
 import {render, screen} from "@testing-library/react";
 
 import {Avatar} from "../../../pages/hero/components/Avatar";
-import {MOCKED_APP_INFO} from "../../data/app.ts";
+import {MOCKED_APP_INFO} from "../../models/app.ts";
 
 describe("Avatar", () => {
     test("renders avatar image", () => {

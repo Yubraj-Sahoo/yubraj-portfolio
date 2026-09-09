@@ -2,7 +2,7 @@ import {describe, expect, test} from "vitest";
 import {render, screen} from "@testing-library/react";
 
 import {HeroContent} from "../../../pages/hero/components/HeroContent";
-import {MOCKED_APP_INFO} from "../../data/app";
+import {MOCKED_APP_INFO} from "../../models/app";
 
 describe("HeroContent", () => {
     test("renders greeting", () => {
