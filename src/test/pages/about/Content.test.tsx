@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { Content } from '../../../pages/about/components/Content.tsx';
+import { Content } from '../../../pages/about';
 import { ABOUT_CONTENT } from '../../../data';
 
 describe('Content component', () => {
