@@ -3,7 +3,7 @@ import {render, screen} from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import {NavItem} from "../../../../components/layout/Navbar/NavItem";
-import type {NavLink} from "../../../../types";
+import type {NavLink} from "../../../../models";
 
 describe("NavItem", () => {
     const mockItem: NavLink = {

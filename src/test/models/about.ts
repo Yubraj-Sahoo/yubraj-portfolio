@@ -1,5 +1,5 @@
 import {FiAward, FiClock, FiLayers, FiTarget} from 'react-icons/fi';
-import type {AboutContent, Statistic} from '../types';
+import type {AboutContent, Statistic} from "../../models";
 
 export const ABOUT_CONTENT: AboutContent = {
     eyebrow: 'ABOUT ME',

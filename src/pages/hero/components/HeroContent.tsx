@@ -1,4 +1,4 @@
-import type { AppInfo } from '../../../types';
+import type { AppInfo } from "../../../models";
 
 interface Props {
   item: AppInfo;

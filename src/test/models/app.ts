@@ -1,4 +1,4 @@
-import type {AppInfo} from '../../types';
+import type {AppInfo} from "../../models";
 
 export const MOCKED_APP_INFO: AppInfo = {
     personal: {

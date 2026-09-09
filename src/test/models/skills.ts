@@ -1,4 +1,4 @@
-import type {SkillContent} from "../types";
+import type {SkillContent} from "../../models";
 import {FaCloud, FaCode, FaDatabase, FaServer} from "react-icons/fa";
 
 /**

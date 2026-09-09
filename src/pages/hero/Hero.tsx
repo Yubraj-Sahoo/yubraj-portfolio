@@ -1,5 +1,5 @@
 import {HeroContent} from "./components/HeroContent.tsx";
-import {APP_INFO, HERO_ACTIONS} from "../../data";
+import {APP_INFO, HERO_ACTIONS} from "../../models";
 
 import './Hero.css'
 import {Avatar} from "./components/Avatar.tsx";

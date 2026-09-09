@@ -1,5 +1,5 @@
 import type {IconType} from "react-icons";
-import type {Skill} from "../../../types";
+import type {Skill} from "../../../models";
 import {Icon} from "../../../components/ui";
 import {ProgressBar} from "../../../components/ui";
 

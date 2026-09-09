@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import { Statistics } from '../../../pages/about';
-import { ABOUT_STATISTICS } from '../../../data';
+import { ABOUT_STATISTICS } from '../../../models';
 
 // Mock the icons
 vi.mock('react-icons/fi', () => ({

@@ -9,7 +9,7 @@ vi.mock("../../../api/v1/services/resume", () => ({
 
 import {Hero} from "../../../pages/hero";
 import {downloadResume} from "../../../api/v1/services/resume";
-import {APP_INFO} from "../../../data";
+import {APP_INFO} from "../../../models";
 
 describe("Hero", () => {
     beforeEach(() => {

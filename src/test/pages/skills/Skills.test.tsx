@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { vi } from "vitest";
 import { Skills } from "../../../pages/skills";
-import { TECHNICAL_EXPERTISE } from "../../../data";
+import { TECHNICAL_EXPERTISE } from "../../../models";
 
 // Mock the react-icons to prevent errors in the test environment
 vi.mock("react-icons/fa", () => ({
@@ -9,7 +9,7 @@ vi.mock("react-icons/fa", () => ({
     FaCode: () => <svg role="img" />,
 }));
 
-vi.mock("../../../data", () => ({
+vi.mock("../models", () => ({
     TECHNICAL_EXPERTISE: {
         eyebrow: "MY SKILLS",
         title: "Technical Expertise",

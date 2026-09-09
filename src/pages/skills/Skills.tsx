@@ -1,4 +1,4 @@
-import {TECHNICAL_EXPERTISE} from "../../data";
+import {TECHNICAL_EXPERTISE} from "../../models";
 import {SkillType} from "./components/SkillType.tsx";
 
 export const Skills = () => {

@@ -1,4 +1,4 @@
-import {ABOUT_CONTENT, APP_INFO} from '../../../data';
+import {ABOUT_CONTENT, APP_INFO} from "../../../models";
 import {Button} from '../../../components/ui';
 
 export const Content = () => {

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { Content } from '../../../pages/about';
-import { ABOUT_CONTENT } from '../../../data';
+import { ABOUT_CONTENT } from "../../../models";
 
 describe('Content component', () => {
   it('should render the content correctly', () => {

@@ -1,4 +1,4 @@
-import {ABOUT_STATISTICS} from '../../../data';
+import {ABOUT_STATISTICS} from "../../../models";
 import {Card} from '../../../components/ui';
 
 export const Statistics = () => {

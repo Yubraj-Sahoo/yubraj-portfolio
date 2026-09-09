@@ -1,4 +1,4 @@
-import {WORKED_TECHNOLOGIES} from "../../../data";
+import {WORKED_TECHNOLOGIES} from "../../../models";
 import {Icon} from "../../../components/ui";
 
 /**

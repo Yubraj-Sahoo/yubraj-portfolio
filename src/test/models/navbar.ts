@@ -1,4 +1,4 @@
-import type {NavLink} from "../../types";
+import type {NavLink} from "../../models";
 
 export const MOCKED_NAV_LINKS: NavLink[] = [
     {

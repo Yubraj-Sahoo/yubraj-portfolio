@@ -1,4 +1,4 @@
-import type {HeroActions} from '../types';
+import type {HeroActions} from './types';
 
 export const HERO_ACTIONS: HeroActions = {
     resumeLabel: 'Download Resume',

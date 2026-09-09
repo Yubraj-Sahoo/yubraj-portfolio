@@ -5,7 +5,7 @@ import userEvent from "@testing-library/user-event";
 import {MOCKED_APP_INFO} from "../../../data/app";
 
 // Mock the data module before importing Logo
-vi.mock("../../../../data", () => ({
+vi.mock("../models", () => ({
     APP_INFO: MOCKED_APP_INFO,
 }));
 
