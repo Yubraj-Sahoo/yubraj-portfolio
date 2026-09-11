@@ -31,6 +31,7 @@ export const HealthProvider: React.FC<{ children: React.ReactNode }> = ({childre
                         setIsBackendUp(false);
                     }
                 } else {
+                    console.log("Backend health check failed: Response:", response);
                     console.log("Backend health check failed: Invalid content type:", contentType);
                     setIsBackendUp(false);
                 }
