@@ -23,6 +23,20 @@ export default defineConfig(({ mode }) => {
         }
       }
     },
+    preview: {
+      proxy: {
+        '/api': {
+          target: env.VITE_API_URL || 'http://localhost:8080',
+          changeOrigin: true,
+          secure: false,
+        },
+        '/actuator': {
+          target: env.VITE_API_URL || 'http://localhost:8080',
+          changeOrigin: true,
+          secure: false,
+        }
+      }
+    },
     test: {
       globals: true,
       environment: "jsdom",
