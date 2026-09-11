@@ -3,6 +3,9 @@ import {API_ENDPOINTS} from "../constants/endpoints.ts";
 export const checkHealthAPI = async (): Promise<boolean> => {
     try {
         const baseUrl = import.meta.env.VITE_API_URL || '';
+        if(baseUrl === '') {
+            console.log("VITE_API_URL is not set. Cannot perform health check.");
+        }
         const response = await fetch(`${baseUrl}${API_ENDPOINTS.HEALTH}`);
 
         if (response.ok) {
@@ -12,7 +15,7 @@ export const checkHealthAPI = async (): Promise<boolean> => {
                 return data.status === 'UP';
             }
         }
-        console.log(`Health check failed with status: ${response.status} and url : ${baseUrl}${API_ENDPOINTS.HEALTH} with response: ${await response.text()}`);
+        console.log(`Health check failed with status: ${response.status}`);
         return false;
     } catch (error) {
         console.log(`Health check failed with error: ${error}`);
