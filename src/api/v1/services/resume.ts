@@ -4,7 +4,8 @@ import {AccessType} from "../enums/accessType.ts";
 
 export const downloadResume = async () => {
     try {
-        const fileUrl = `${API_ENDPOINTS.FILE(FileNames.RESUME)}?access=${AccessType.PRIVATE}`;
+        const baseUrl = import.meta.env.VITE_API_URL || '';
+        const fileUrl = `${baseUrl}${API_ENDPOINTS.FILE(FileNames.RESUME)}?access=${AccessType.PRIVATE}`;
 
         // 1. Open a blank window synchronously to avoid popup blockers
         const pdfWindow = window.open("", "_blank");

@@ -6,4 +6,5 @@ export const API_ENDPOINTS = {
     PRIVILEGES: '/api/v1/users/privileges',
     FILES: '/api/v1/constants',
     FILE: (fileName: string) => `/api/v1/files/${fileName}`,
+    HEALTH: '/actuator/health',
 } as const;
