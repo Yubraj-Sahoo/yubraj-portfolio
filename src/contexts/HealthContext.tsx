@@ -1,4 +1,5 @@
 import React, {createContext, useContext, useState, useEffect} from 'react';
+import { checkHealthAPI } from '../api/v1/services/health';
 
 interface HealthContextType {
     isBackendUp: boolean;
@@ -17,31 +18,14 @@ export const HealthProvider: React.FC<{ children: React.ReactNode }> = ({childre
     const [isInitialLoading, setIsInitialLoading] = useState(true);
 
     const checkBackendHealth = async () => {
-        try {
-            console.log("Checking backend health...");
-            const response = await fetch('/actuator/health');
-            if (response.ok) {
-                const contentType = response.headers.get("content-type");
-                if (contentType && contentType.includes("json")) {
-                    const data = await response.json();
-                    if (data.status === 'UP') {
-                        console.log("Backend health check successful: UP");
-                        setIsBackendUp(true);
-                    } else {
-                        setIsBackendUp(false);
-                    }
-                } else {
-                    console.log("Backend health check failed: Response:", response);
-                    console.log("Backend health check failed: Invalid content type:", contentType);
-                    setIsBackendUp(false);
-                }
-            } else {
-                setIsBackendUp(false);
-            }
-        } catch (error) {
-            // Silently handle network errors when backend is down
-            setIsBackendUp(false);
+        console.log("Checking backend health...");
+        const isUp = await checkHealthAPI();
+        if (isUp) {
+            console.log("Backend health check successful: UP");
+        } else {
+            console.log("Backend health check failed.");
         }
+        setIsBackendUp(isUp);
     };
 
     useEffect(() => {
