@@ -15,6 +15,11 @@ export default defineConfig(({ mode }) => {
           target: env.VITE_API_URL || 'http://localhost:8080',
           changeOrigin: true,
           secure: false,
+        },
+        '/actuator': {
+          target: env.VITE_API_URL || 'http://localhost:8080',
+          changeOrigin: true,
+          secure: false,
         }
       }
     },
