@@ -1,0 +1,116 @@
+.experience-section {
+    position: relative;
+}
+
+.experience__item {
+    position: relative;
+    gap: 2rem;
+}
+
+.experience__timeline-visual {
+    width: 20px;
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.timeline-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--color-button-primary);
+    box-shadow: 0 0 0 4px var(--color-button-ghost-active-bg);
+    z-index: 2;
+}
+
+.timeline-line {
+    width: 2px;
+    background-color: var(--color-progress-bg);
+    flex-grow: 1;
+    margin-top: 8px;
+    margin-bottom: -10px; /* Connects to the next item */
+    min-height: 50px;
+}
+
+.experience__period {
+    color: var(--color-button-disabled-text);
+    font-size: 0.95rem;
+    font-weight: 500;
+    width: 180px;
+    flex-shrink: 0;
+    margin-bottom: 1rem;
+}
+
+.experience__role {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-main-components);
+}
+
+.experience__duration {
+    font-size: 0.9rem;
+    color: var(--color-button-disabled-text);
+}
+
+.experience__company {
+    font-size: 0.95rem;
+    color: var(--color-button-disabled-text);
+    font-weight: 500;
+}
+
+.experience__responsibilities {
+    list-style: none;
+}
+
+.experience__responsibilities li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-button-disabled-text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.experience__responsibilities li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-button-disabled-text);
+    font-weight: bold;
+}
+
+.experience__timeline {
+    max-height: 520px;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+.experience__timeline::-webkit-scrollbar {
+    width: 6px;
+}
+.experience__timeline::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+}
+.experience__timeline::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+.experience__timeline::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .experience__item {
+        gap: 1rem;
+    }
+    
+    .experience__period {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .experience__content {
+        gap: 0;
+    }
+}

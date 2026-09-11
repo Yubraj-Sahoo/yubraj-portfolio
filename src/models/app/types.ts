@@ -57,7 +57,11 @@ export interface AppInfo {
     config:{
         showHireButton: boolean;
         enableResume:boolean,
-        enableContact:boolean,
-        enableExperience:boolean,
+        enableHero: boolean;
+        enableAbout: boolean;
+        enableSkills: boolean;
+        enableExperience: boolean;
+        enableProjects: boolean;
+        enableContact: boolean;
     };
 }

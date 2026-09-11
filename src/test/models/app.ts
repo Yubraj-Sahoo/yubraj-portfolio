@@ -25,7 +25,11 @@ export const MOCKED_APP_INFO: AppInfo = {
     config: {
         showHireButton: true,
         enableResume: true,
-        enableContact: true,
+        enableHero: true,
+        enableAbout: true,
+        enableSkills: true,
         enableExperience: true,
+        enableProjects: true,
+        enableContact: true,
     }
 };

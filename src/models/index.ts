@@ -4,3 +4,4 @@ export * from './hero';
 export * from './navbar';
 export * from './skills';
 export * from './technologies';
+export * from './experience';
