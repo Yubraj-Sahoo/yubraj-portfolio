@@ -14,6 +14,10 @@ import {APP_INFO} from "../../../models";
 describe("Hero", () => {
     beforeEach(() => {
         vi.clearAllMocks();
+        globalThis.fetch = vi.fn().mockResolvedValue({
+            ok: true,
+            json: async () => ({ status: 'UP' }),
+        }) as unknown as typeof fetch;
     });
 
     test("renders hero content", () => {
@@ -40,11 +44,11 @@ describe("Hero", () => {
         ).toBeInTheDocument();
     });
 
-    test("renders download resume button", () => {
+    test("renders download resume button", async () => {
         render(<Hero/>);
 
         expect(
-            screen.getByRole("button", {
+            await screen.findByRole("button", {
                 name: /download resume/i,
             })
         ).toBeInTheDocument();
@@ -55,11 +59,11 @@ describe("Hero", () => {
 
         render(<Hero/>);
 
-        await user.click(
-            screen.getByRole("button", {
-                name: /download resume/i,
-            })
-        );
+        const button = await screen.findByRole("button", {
+            name: /download resume/i,
+        });
+
+        await user.click(button);
 
         expect(downloadResume).toHaveBeenCalledTimes(1);
     });
