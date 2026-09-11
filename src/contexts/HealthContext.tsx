@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, {createContext, useContext, useState, useEffect} from 'react';
 
 interface HealthContextType {
     isBackendUp: boolean;
@@ -12,7 +12,7 @@ const HealthContext = createContext<HealthContextType>({
 
 export const useHealth = () => useContext(HealthContext);
 
-export const HealthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const HealthProvider: React.FC<{ children: React.ReactNode }> = ({children}) => {
     const [isBackendUp, setIsBackendUp] = useState(false);
     const [isInitialLoading, setIsInitialLoading] = useState(true);
 
@@ -31,6 +31,7 @@ export const HealthProvider: React.FC<{ children: React.ReactNode }> = ({ childr
                         setIsBackendUp(false);
                     }
                 } else {
+                    console.log("Backend health check failed: Invalid content type:", contentType);
                     setIsBackendUp(false);
                 }
             } else {
@@ -57,7 +58,7 @@ export const HealthProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     }, []);
 
     return (
-        <HealthContext.Provider value={{ isBackendUp, isInitialLoading }}>
+        <HealthContext.Provider value={{isBackendUp, isInitialLoading}}>
             {children}
         </HealthContext.Provider>
     );
