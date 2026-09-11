@@ -18,12 +18,14 @@ export const HealthProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
     const checkBackendHealth = async () => {
         try {
+            console.log("Checking backend health...");
             const response = await fetch('/actuator/health');
             if (response.ok) {
                 const contentType = response.headers.get("content-type");
-                if (contentType && contentType.indexOf("application/json") !== -1) {
+                if (contentType && contentType.includes("json")) {
                     const data = await response.json();
                     if (data.status === 'UP') {
+                        console.log("Backend health check successful: UP");
                         setIsBackendUp(true);
                     } else {
                         setIsBackendUp(false);
