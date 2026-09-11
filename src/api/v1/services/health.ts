@@ -12,7 +12,7 @@ export const checkHealthAPI = async (): Promise<boolean> => {
                 return data.status === 'UP';
             }
         }
-        console.log(`Health check failed with status: ${response.status} with response: ${await response.text()}`);
+        console.log(`Health check failed with status: ${response.status} and url : ${baseUrl}${API_ENDPOINTS.HEALTH} with response: ${await response.text()}`);
         return false;
     } catch (error) {
         console.log(`Health check failed with error: ${error}`);
