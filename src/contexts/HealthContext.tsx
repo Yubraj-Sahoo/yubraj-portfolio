@@ -20,9 +20,14 @@ export const HealthProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         try {
             const response = await fetch('/actuator/health');
             if (response.ok) {
-                const data = await response.json();
-                if (data.status === 'UP') {
-                    setIsBackendUp(true);
+                const contentType = response.headers.get("content-type");
+                if (contentType && contentType.indexOf("application/json") !== -1) {
+                    const data = await response.json();
+                    if (data.status === 'UP') {
+                        setIsBackendUp(true);
+                    } else {
+                        setIsBackendUp(false);
+                    }
                 } else {
                     setIsBackendUp(false);
                 }
@@ -30,7 +35,7 @@ export const HealthProvider: React.FC<{ children: React.ReactNode }> = ({ childr
                 setIsBackendUp(false);
             }
         } catch (error) {
-            console.error("Backend is not up:", error);
+            // Silently handle network errors when backend is down
             setIsBackendUp(false);
         }
     };
