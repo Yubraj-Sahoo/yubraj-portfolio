@@ -34,7 +34,11 @@ export const APP_INFO: AppInfo = {
     config: {
         showHireButton: false,
         enableResume: true,
+        enableHero: true,
+        enableAbout: true,
+        enableSkills: true,
+        enableExperience: true,
+        enableProjects: false,
         enableContact: false,
-        enableExperience: false,
     },
 };
